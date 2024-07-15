@@ -25,8 +25,23 @@ const Toast = ({id, color, title, body, actions}: ToastInterface) => {
         >
             <div className="w-full p-4 space-y-1">
                 {title && <h6 className="font-medium">{title}</h6>}
-                {body && <}
+                {body && <p className="text-slate-500 dark:text-slate-300">{body}</p>}
+                <div className="max-w-fit flex flex-wrap justify-start items-start">
+                    {actions?.map((a,index) => {
+                        return(
+                            <button
+                                key={index}
+                                className="text-blue-500 font-semibold hover:underline text-center pr-2 action"
+                                onClick={() => a.action()}
+                            >
+                                {a.label}
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     )
 }
+
+export default Toast;
