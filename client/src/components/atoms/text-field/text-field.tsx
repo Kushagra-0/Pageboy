@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import InputProps from "../../../types/interfaces/input";
 import InputMask from "inputmask"
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid"
-import { ExclamationCircleIcon} from "@heroicons/react/24/solid"
+import { EyeIcon, EyeOffIcon } from "@heroicons/react/outline";
+import { ExclamationCircleIcon } from "@heroicons/react/solid";
 import Errors from "../errors/errors";
 
 interface TextFieldProps extends InputProps {
@@ -72,7 +72,7 @@ const TextField = ({
                                 className="h-full flex justify-center items-center p-2 text-slate-400"
                             >
                                 {showPassword ? (
-                                    <EyeSlashIcon className="w-4 h-4" />
+                                    <EyeOffIcon className="w-4 h-4" />
                                 ) : (
                                     <EyeIcon className="h-4 w-4" />
                                 )}

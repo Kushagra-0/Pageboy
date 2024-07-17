@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import ActionInterface from "../types/interfaces/action";
 import ToastInterface from "../types/interfaces/toast";
 import { v4 as uuid } from "uuid";
+import ToastManager from "../components/organisms/toast-manager/toast-manager";
 
 const TOAST_TIMEOUT = 5000;
 
@@ -95,6 +96,7 @@ export const ToastProvider = ({children}: ToastProviderInterface) => {
             value={{ toasts, addToast, removeToast, error, success }}
         >
             {children}
+            <ToastManager />
         </ToastContext.Provider>
     )
 };

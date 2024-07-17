@@ -5,7 +5,7 @@ interface ToastInterface {
     color: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
     title?: string | JSX.Element;
     body?: string | JSX.Element;
-    action?: Array<ActionInterface>;
+    actions?: Array<ActionInterface>;
 }
 
 export default ToastInterface;
